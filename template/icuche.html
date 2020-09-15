@@ -1,0 +1,443 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+	<title>Medically a Medical Category Flat Bootstrap Responsive Web Template | Home :: w3layouts</title>
+
+	<!--meta tags -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="Medically Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+	<script type="application/x-javascript">
+		addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); }
+	</script>
+	<!--//meta tags ends here-->
+	<!--booststrap-->
+	<link href="{%static 'css/bootstrap.css' %}" rel="stylesheet" type="text/css" media="all">
+
+	<!--//booststrap end-->
+
+	<!-- font-awesome icons -->
+	<link href="{%static 'css/font-awesome.css' %}" rel="stylesheet">
+	<!-- //font-awesome icons -->
+	<link rel="stylesheet" href="{%static 'css/chocolat.css' %}" type="text/css" media="screen" />
+	<!-- gallery-->
+	<link rel="stylesheet" href="{%static 'css/owl.carousel.css' %}" type="text/css" media="all">
+	<!-- clients-->
+
+	<link rel="stylesheet" href="{%static 'css/flexslider.css' %}" type="text/css" media="screen" />
+	<!-- banner text slider-->
+	<!--stylesheets-->
+	<link href="{%static 'css/style.css' %}" rel='stylesheet' type='text/css' media="all">
+	<!-- banner text slider-->
+
+	<link href="//fonts.googleapis.com/css?family=Barlow+Condensed:300,400,500,600" rel="stylesheet">
+	<!--//style sheet end here-->
+</head>
+<style>
+   
+  .date
+    
+    {
+        margin-left: 20px;
+        background-color: #add8e630;
+        border:none;
+        outline: none;
+        width: 200px;
+        height: 40px;
+        color:white;
+        border-radius: 2px;
+        font-size: 20px;
+        padding-left: 30px;
+        font-family: arlow condensed;
+        
+    }   
+    .modal-ku {
+  width: 750px;
+  margin: auto;
+}
+</style>
+<body>
+    
+	<div class="banner-w3" id="home" style="max-height: 500px;">
+		<div class="w3-agile-logo">
+			<div class=" head-wl">
+				<div class="agileinfo-social-grids">
+					<ul>
+						<li><a href="#"><span class="fa fa-facebook"></span></a></li>
+						<li><a href="#"><span class="fa fa-twitter"></span></a></li>
+						<li><a href="#"><span class="fa fa-rss"></span></a></li>
+						<li><a href="#"><span class="fa fa-vk"></span></a></li>
+					</ul>
+				</div>
+				<div class="w3-header-top-right">
+					<div class="email-right">
+						<p><span class="fa fa-envelope" aria-hidden="true"></span> <a href="mailto:strokedept@gmail.com" class="info"> Patientdept@gmail.com</a></p>
+
+					</div>
+					<div class="w3-header-top-right-text">
+
+						<p><span class="fa fa-phone" aria-hidden="true"></span> (91)+***** ***95</p>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+		<div class="header-w3layouts">
+
+			<!-- Navigation -->
+			<nav class="navbar navbar-default navbar-fixed-top">
+				<div class="navbar-header page-scroll">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+					<span class="sr-only"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+        </button>
+       
+
+          <h1><a class="navbar-brand " >Stay Patient</a></h1>
+       
+        </div>
+       
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="index">Home</a></li>
+						<li><a href="details">Patient Details</a></li>
+						<li><a href="facilities">Facilities</a></li>
+						<li><a href="availability">Availability</a></li>
+					
+						<li><a href="index1">Logout</a></li>
+          </ul>
+          
+				</div>
+        <!-- /.navbar-collapse -->
+        
+			</nav>
+      
+
+            <div class="" style="margin-top: 90px;">
+                     <h4 class="" style="color: #d6f5b3;font-size: 26px;text-align: center">{{icu}} </h4>
+
+                    </div> 
+                    
+                    <div style="width: 8%;height:100px;padding-bottom: 0px;background-color:#9a9ea930;margin-left: 700px;margin-top: 100px;padding-top: 20px;padding-left: 20px;">
+                      {% for i in x %}
+                      <!--<input type="hidden" id="no" style="color: red" value="<%=i%>">-->
+                      <div style="width: 110px;height: 40px;padding-left: 12px;margin-left: 10px;float: left;margin-top: 10px;">
+                        {% if info %} 
+                        <i class="fa fa-bed fa-3x" aria-hidden="true" style=" color:red;"></i>
+
+                        {% else %}
+                        <i class="fa fa-bed fa-3x" aria-hidden="true" style=" color:#28e48e;"></i>
+
+                        {% endif %}
+
+                       
+                      <br>
+                     </div>
+                     {% endfor %}
+          <div class="clearfix"> </div>
+          
+        </div>
+        <div class="" style="margin-top: 2px;margin-left: 740px;">
+          <a href="#" data-toggle="modal" data-target="#myModalll" onclick="myfunction2()" ><button class="btn success">Book</button></a>
+
+        </div>
+        
+                
+             
+
+     <div class="modal fade" id="myModal" role="dialog" style="padding-bottom: 20px;margin-top: 20px;margin-left: -300px;   ">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content" style="background-color:#ca992cf0;padding-bottom: 30px;width: 900px;height: 560px">
+        <div class="modal-header">
+          <button type="button" class="close fa-4x" data-dismiss="modal" style="outline:none;margin-top: -25px;color: red">&times;</button>
+          <h4 class="modal-title">Book Bed</h4>
+        </div>
+        <div class="modal-body">
+            <form action="iicucheck" method="post">
+              {% csrf_token %}
+            <div >
+            <label style="color: white;font-family: barlow condensed;font-size: 26px;margin-top: 20px;">Confirm starting Date and Time</label>
+            <br>
+            <input type="date" name="d" min="2018-11-01" max="2019-04-31"  class="date">
+            <input type="date" name="t" min="2018-11-01" max="2019-04-31"  class="date">
+            <input type="date" id="start" name="date0"  min="2018-11-01" max="2019-04-31"  class="date">
+            
+              <input type="time" id="appt" name="time0" value="<%=time%>" class="date"
+                          min="9:00" max="18:00" required>
+              <br><br>
+              <label style="color: white;font-family: barlow condensed;font-size: 26px;margin-top: 20px;">Select Discharge Date and Time</label>
+            <br>
+            <input type="date" id="start" name="date1" value="<%=date%>" min="2018-11-01" max="2019-04-31"  class="date">
+            
+              <input type="time" id="appt" name="time1" value="09:30" class="date"
+                          min="9:00" max="18:00" required>
+            </div>
+            <div style="margin-left: 450px;margin-top: -200px;padding: 15px;padding-bottom: 60px;padding-right:  -15px;background-color: #e4000014;border-radius: 14px;">
+                
+            <label style="color: white;font-family: barlow condensed;font-size: 26px;margin-top: 20px;">Enter Patient Name:</label>
+            <input type='text'  class="date" name="pname" id="na" style="float:right;margin-right: 50px;width: 250px" required> <br> <br> <br>  
+            <label style="color: white;font-family: barlow condensed;font-size: 26px;margin-top: 30px;">Enter Patient Id:</label>
+            <input type='text' class="date" name="id" style="float:right;margin-right: 50px;width: 250px"> <br> <br> <br> 
+            <label style="color: white;font-family: barlow condensed;font-size: 26px;margin-top: 30px;">Enter Emergency No:</label>
+            <input type='text' class="date" name="emer" style="float:right;margin-right: 50px;width: 250px"> 
+                
+            </div>
+            <div style="margin-top:  -160px;">
+             <label style="color: white;font-family: barlow condensed;font-size: 26px;margin-top: 30px;">Select Disease:</label>
+             <select name="level" class="date" style="margin-left: 57px;">
+              <option value="Cancer" style="background-color:lightblue;color:white">Cancer</option>
+              <option value="Autoimmune Diseases" style="background-color:lightblue;color:white">Autoimmune Diseases</option>
+              <option value="Celiac Disease" style="background-color:lightblue;color:white">Celiac Disease</option>
+              <option value="Heart Disease" style="background-color:lightblue">Heart Disease</option>
+              <option value="Infectious Diseases" style="background-color:lightblue">Infectious Diseases</option>
+              <option value="Allergies & Asthma" style="background-color:lightblue">Allergies & Asthma</option>
+              <option value="Crohn's & Colitis" style="background-color:lightblue">Crohn's & Colitis</option>
+              <option value="Liver Disease." style="background-color:lightblue">Liver Disease.</option>
+             </select>
+            </div>
+            <div style="margin-top:  10px;">
+             <label style="color: white;font-family: barlow condensed;font-size: 26px;margin-top: 30px;">Confirm the Seat No:</label>
+             <input type="text" name="seatno" id="seat1" class="date" style="margin-left: 50px">
+             </select>
+            </div>
+            <br>
+            <input type="submit" class="btn btn-success" value="Submit" style="font-size: 18px;width: 120px;background-color: #ffd70085;    border: none;font-family: barlow condensed;float:right;margin-right: 10px;box-shadow: 2px 8px 2px 2px rgba(0,0,0,0.3)">
+            </form>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+ 
+             <div class="modal fade" id="myModalll" role="dialog" style="padding-bottom: 20px;margin-top: 20px;margin-left: -300px;   ">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content" style="background-color:#ca992cf0;padding-bottom: 30px;width: 900px;height: 560px">
+        <div class="modal-header">
+          <button type="button" class="close fa-4x" data-dismiss="modal" style="outline:none;margin-top: -25px;color: red">&times;</button>
+          <h4 class="modal-title">Book Bed</h4>
+        </div>
+        <div class="modal-body">
+            <form action="iicucheck" method="post">
+              {% csrf_token %}
+            <div >
+            <label style="color: white;font-family: barlow condensed;font-size: 26px;margin-top: 20px;">Confirm starting Date and Time</label>
+            <br>
+           
+            <input type="date" id="start" name="date01" value="<%=date%>" min="2018-11-01" max="2019-04-31"  class="date">
+            
+              <input type="time" id="appt" name="time01" value="<%=time%>" class="date"
+                          min="9:00" max="18:00" required>
+              <br><br>
+              <label style="color: white;font-family: barlow condensed;font-size: 26px;margin-top: 20px;">Select Discharge Date and Time</label>
+            <br>
+            <input type="date" id="start" name="date1" value="<%=date%>" min="2018-11-01" max="2019-04-31"  class="date">
+            
+              <input type="time" id="appt" name="time1" value="09:30" class="date"
+                          min="9:00" max="18:00" required>
+            </div>
+            <div style="margin-left: 450px;margin-top: -200px;padding: 15px;padding-bottom: 60px;padding-right:  -15px;background-color: #e4000014;border-radius: 14px;">
+                
+            <label style="color: white;font-family: barlow condensed;font-size: 26px;margin-top: 20px;">Enter Patient Name:</label>
+            <input type='text'  class="date" name="pname" id="na" style="float:right;margin-right: 50px;width: 250px" required> <br> <br> <br>  
+            <label style="color: white;font-family: barlow condensed;font-size: 26px;margin-top: 30px;">Enter Patient Id:</label>
+            <input type='text' class="date" name="pid" style="float:right;margin-right: 50px;width: 250px"> <br> <br> <br> 
+            <label style="color: white;font-family: barlow condensed;font-size: 26px;margin-top: 30px;">Enter Emergency No:</label>
+            <input type='text' class="date" name="emer" style="float:right;margin-right: 50px;width: 250px"> 
+                
+            </div>
+            <div style="margin-top:  -160px;">
+             <label style="color: white;font-family: barlow condensed;font-size: 26px;margin-top: 30px;">Select Disease:</label>
+             <select name="level" id="slevel" class="date" style="margin-left: 57px;">
+              <option value="Cancer" style="background-color:lightblue;color:white">Cancer</option>
+              <option value="Autoimmune Diseases" style="background-color:lightblue;color:white">Autoimmune Diseases</option>
+              <option value="Celiac Disease" style="background-color:lightblue;color:white">Celiac Disease</option>
+              <option value="Heart Disease" style="background-color:lightblue">Heart Disease</option>
+              <option value="Infectious Diseases" style="background-color:lightblue">Infectious Diseases</option>
+              <option value="Allergies & Asthma" style="background-color:lightblue">Allergies & Asthma</option>
+              <option value="Crohn's & Colitis" style="background-color:lightblue">Crohn's & Colitis</option>
+              <option value="Liver Disease." style="background-color:lightblue">Liver Disease.</option>
+             </select>
+            </div>
+            <div style="margin-top:  10px;">
+             <label style="color: white;font-family: barlow condensed;font-size: 26px;margin-top: 30px;">Confirm the Seat No:</label>
+             <input type="text" name="seatno" id="seat3" class="date" style="margin-left: 50px">
+             </select>
+            </div>
+            <br>
+            <input type="submit" class="btn btn-success" value="Submit" style="font-size: 18px;width: 120px;background-color: #ffd70085;    border: none;font-family: barlow condensed;float:right;margin-right: 10px;box-shadow: 2px 8px 2px 2px rgba(0,0,0,0.3)">
+            </form>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+            
+             <div class="modal fade" id="myModal1" role="dialog" style="padding-bottom: 20px;margin-top: 20px;margin-left: -300px;   ">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content" style="background-color:#00e4fddb;padding-bottom: 30px;width: 900px;height: 520px">
+        <div class="modal-header">
+          <button type="button" class="close fa-4x" data-dismiss="modal" style="outline:none;margin-top: -25px;color: red">&times;</button>
+          <h4 class="modal-title" style="color: #ffee1f">Patient Details</h4>
+        </div>
+        <div class="modal-body">
+            <form action="iicucheck" method="post">
+              {% csrf_token %}
+            <div >
+            <label style="color: white;font-family: barlow condensed;font-size: 26px;margin-top: 20px;">Admission Date and Time</label>
+            <br>
+            <input type="hidden" name="d" value="<%=date%>">
+            <input type="hidden" name="t" value="<%=time%>">
+            <input type="date" id="start02" name="date0" value="<%=date%>" min="2018-11-01" max="2019-04-31"  class="date">
+            
+              <input type="time" id="appt2" name="time0" value="<%=time%>" class="date"
+                          min="9:00" max="18:00" required>
+              <br><br>
+              <label style="color: white;font-family: barlow condensed;font-size: 26px;margin-top: 20px;">Discharge Date and Time</label>
+            <br>
+            <input type="date" id="start1" name="date1" value="<%=date%>" min="2018-11-01" max="2019-04-31"  class="date">
+            
+              <input type="time" id="appt1" name="time1" value="09:30" class="date"
+                          min="9:00" max="18:00" required>
+            </div>
+            <div style="margin-left: 450px;margin-top: -200px;padding: 15px;padding-bottom: 60px;padding-right:  -15px;background-color: #e4000014;border-radius: 14px;">
+                
+            <label style="color: white;font-family: barlow condensed;font-size: 26px;margin-top: 20px;">Patient Name:</label>
+            <input type='text'  class="date" name="pname" id="na1" style="float:right;margin-right: 50px;width: 250px" required> <br> <br> <br>  
+            <label style="color: white;font-family: barlow condensed;font-size: 26px;margin-top: 30px;">Patient Id:</label>
+            <input type='text' class="date" name="pid" id="pid" style="float:right;margin-right: 50px;width: 250px"> <br> <br> <br> 
+            <label style="color: white;font-family: barlow condensed;font-size: 26px;margin-top: 30px;">Emergency No:</label>
+            <input type='text' class="date" name="emer" id="pcon" style="float:right;margin-right: 50px;width: 250px"> 
+                
+            </div>
+            <div style="margin-top:  -160px;">
+             <label style="color: white;font-family: barlow condensed;font-size: 26px;margin-top: 30px;">Select Disease</label>
+             <select name="level" id="slevel2" class="date" style="margin-left: 57px;">
+              <option value="Cancer" style="background-color:lightblue;color:white">Cancer</option>
+              <option value="Autoimmune Diseases" style="background-color:lightblue;color:white">Autoimmune Diseases</option>
+              <option value="Celiac Disease" style="background-color:lightblue;color:white">Celiac Disease</option>
+              <option value="Heart Disease" style="background-color:lightblue">Heart Disease</option>
+              <option value="Infectious Diseases" style="background-color:lightblue">Infectious Diseases</option>
+              <option value="Allergies & Asthma" style="background-color:lightblue">Allergies & Asthma</option>
+              <option value="Crohn's & Colitis" style="background-color:lightblue">Crohn's & Colitis</option>
+              <option value="Liver Disease." style="background-color:lightblue">Liver Disease.</option>
+             </select>
+            </div>
+            <div style="margin-top:  10px;">
+             <label style="color: white;font-family: barlow condensed;font-size: 26px;margin-top: 30px;">Seat No:</label>
+             <input type="text" name="seatno" id="seat2" class="date" style="margin-left: 50px">
+             </select>
+            </div>
+            <br>
+           
+            </form>
+        </div>
+      </div>
+      
+    </div>
+  </div>   
+  
+
+	<!-- //header -->
+	<!-- modal -->
+	
+	
+	<!--menu script-->
+	<script type='text/javascript' src="{%static 'js/jquery-2.2.3.min.js' %}"></script>
+	<script src="{%static 'js/bootstrap.js' %}"></script>
+	<!--//menu script-->
+	<!--FlexSlider banner-->
+
+	<script defer src="{%static 'js/jquery.flexslider.js' %}"></script>
+	<script type="text/javascript">
+		$(window).load(function () {
+			$('.flexslider').flexslider({
+				animation: "slide",
+				start: function (slider) {
+					$('body').removeClass('loading');
+				}
+			});
+		});
+	</script>
+	<!--End-slider-script-->
+	<!-- OnScroll-Number-Increase-JavaScript -->
+	<script src="{%static 'js/jquery.waypoints.min.js' %}"></script>
+	<script src="{%static 'js/jquery.countup.js' %}"></script>
+	<script>
+		$('.counter').countUp();
+	</script>
+	<!-- //OnScroll-Number-Increase-JavaScript -->
+	<script src="{%static 'js/jquery.chocolat.js' %}"></script>
+
+	<!--light-box-files -->
+	<script type="text/javascript">
+		$(function () {
+			$('.w3_agile_gallery_grid a').Chocolat();
+		});
+	</script>
+	<!-- //gallery -->
+	<!--client carousel -->
+	<script src="{%static 'js/owl.carousel.js' %}"></script>
+	<script>
+		$(document).ready(function () {
+			$("#owl-demo").owlCarousel({
+				items: 1,
+				itemsDesktop: [768, 1],
+				itemsDesktopSmall: [414, 1],
+				lazyLoad: true,
+				autoPlay: true,
+				navigation: true,
+
+				navigationText: false,
+				pagination: true,
+
+			});
+
+		});
+	</script>
+	<!-- start-smoth-scrolling -->
+	<script type="text/javascript" src="{%static 'js/move-top.js' %}"></script>
+	<script type="text/javascript" src="{%static 'js/easing.js' %}"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function ($) {
+			$(".scroll").click(function (event) {
+				event.preventDefault();
+				$('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
+			});
+		});
+	</script>
+	<!-- start-smoth-scrolling -->
+
+	<!-- here stars scrolling icon -->
+	<script type="text/javascript">
+		$(document).ready(function () {
+			/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+				};
+			*/
+
+			$().UItoTop({ easingType: 'easeOutQuart' });
+
+		});
+	</script>
+	<!-- //here ends scrolling icon -->
+</body>
+
+</html>

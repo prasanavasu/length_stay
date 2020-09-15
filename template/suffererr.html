@@ -1,0 +1,310 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+	<title>Medically a Medical Category Flat Bootstrap Responsive Web Template | Home :: w3layouts</title>
+
+	<!--meta tags -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="Medically Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+	<script type="application/x-javascript">
+		addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); }
+	</script>
+	<!--//meta tags ends here-->
+	<!--booststrap-->
+	<link href="{%static 'css/bootstrap.css' %}" rel="stylesheet" type="text/css" media="all">
+
+	<!--//booststrap end-->
+
+	<!-- font-awesome icons -->
+	<link href="{%static 'css/font-awesome.css' %}" rel="stylesheet">
+	<!-- //font-awesome icons -->
+	<link rel="stylesheet" href="{%static 'css/chocolat.css' %}" type="text/css" media="screen" />
+	<!-- gallery-->
+	<link rel="stylesheet" href="{%static 'css/owl.carousel.css' %}" type="text/css" media="all">
+	<!-- clients-->
+
+	<link rel="stylesheet" href="{%static 'css/flexslider.css' %}" type="text/css" media="screen" />
+	<!-- banner text slider-->
+	<!--stylesheets-->
+	<link href="{%static 'css/style.css' %}" rel='stylesheet' type='text/css' media="all">
+	<!-- banner text slider-->
+
+	<link href="//fonts.googleapis.com/css?family=Barlow+Condensed:300,400,500,600" rel="stylesheet">
+	<!--//style sheet end here-->
+<style>
+   
+  .date
+    
+    {
+        margin-left: 220px;
+        background-color: #add8e630;
+        border:none;
+        outline: none;
+        width: 200px;
+        height: 40px;
+        color:white;
+        border-radius: 2px;
+        font-size: 20px;
+        padding-left: 30px;
+        font-family: arlow condensed;
+        
+    }   
+    .modal-ku {
+  width: 750px;
+  margin: auto;
+}
+</style>
+</head>
+
+<body>
+
+	<div class="banner-w3" id="home">
+		<div class="w3-agile-logo">
+			<div class=" head-wl">
+				<div class="agileinfo-social-grids">
+					<ul>
+						<li><a href="#"><span class="fa fa-facebook"></span></a></li>
+						<li><a href="#"><span class="fa fa-twitter"></span></a></li>
+						<li><a href="#"><span class="fa fa-rss"></span></a></li>
+						<li><a href="#"><span class="fa fa-vk"></span></a></li>
+					</ul>
+				</div>
+				<div class="w3-header-top-right">
+					<div class="email-right">
+						<p><span class="fa fa-envelope" aria-hidden="true"></span> <a href="{%static 'mailto:mail@example.com' %}" class="info"> info@example.com</a></p>
+
+					</div>
+					<div class="w3-header-top-right-text">
+
+						<p><span class="fa fa-phone" aria-hidden="true"></span> (111)+245 245 66</p>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+		<div class="header-w3layouts">
+
+			<!-- Navigation -->
+			<nav class="navbar navbar-default navbar-fixed-top">
+				<div class="navbar-header page-scroll">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+					<span class="sr-only"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+					<h1><a class="navbar-brand " href="#">Medically</a></h1>
+				</div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse navbar-ex1-collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="sufferer">Home</a></li>
+                                               
+							
+                                                <li><a href="index1">Logout</a></li>
+					</ul>
+				</div>
+				<!-- /.navbar-collapse -->
+			</nav>
+		</div>
+
+		
+             <div class="modal fade" id="myModal" role="dialog" style="padding-bottom: 20px;margin-top: 20px;margin-left: -300px;   ">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content" style="background-color: #d8af7c;padding-bottom: 30px;width: 900px;height: 560px">
+        <div class="modal-header">
+          <button type="button" class="close fa-4x" data-dismiss="modal" style="outline:none;margin-top: -25px;color: red">&times;</button>
+          <h4 class="modal-title" style="font-size: 22px;color:#925d36;font-family: times new roman">Read the medical report carefully and fill the below fields</h4>
+        </div>
+        <div class="modal-body">
+            <form action="sufferer" method="post">
+				{% csrf_token %}
+            <div >
+            <label style="color: white;font-family: barlow condensed;font-size: 26px;margin-top: 20px;">When did you Receive the report</label>
+            <br>
+            <input type="date" id="start" name="date0" value="" min="2018-11-01" max="2019-04-31"  class="date" required>
+            
+            </div>
+            <div style="margin-left: 450px;margin-top: -100px;padding: 15px;padding-bottom: 60px;padding-right:  -15px;border-radius: 14px;">
+			<label style="color: white;font-family: barlow condensed;font-size: 26px;margin-top: 30px;">Your Patient Id:</label>
+			
+            <input type='text' class="date"  name="pid"   value = {{idd}}   style="float:right;margin-right: 50px;width: 250px" readonly> <br> <br> <br> 
+			
+			<label style="color: white;font-family: barlow condensed;font-size: 26px;margin-top: 30px;">Enter your Guardian Name:</label>
+            <input type='text' class="date" name="gname"  style="float:right;margin-right: 50px;width: 250px"> <br> <br> <br> 
+            <label style="color: white;font-family: barlow condensed;font-size: 26px;margin-top: 30px;">Enter Emergency No:</label>
+            <input type='text' class="date" name="emer" style="float:right;margin-right: 50px;width: 250px"> 
+                
+            </div>
+            <div style="margin-top:  -295px;">
+             <label style="color: white;font-family: barlow condensed;font-size: 26px;margin-top: 30px;">Select Disease:</label>
+             <select name="level" class="date" >
+             <<option value="Cancer" style="background-color:lightblue;color:white">Cancer</option>
+             <option value="Autoimmune Diseases" style="background-color:lightblue;color:white">Autoimmune Diseases</option>
+             <option value="Celiac Disease" style="background-color:lightblue;color:white">Celiac Disease</option>
+             <option value="Heart Disease" style="background-color:lightblue">Heart Disease</option>
+             <option value="Infectious Diseases" style="background-color:lightblue">Infectious Diseases</option>
+             <option value="Allergies & Asthma" style="background-color:lightblue">Allergies & Asthma</option>
+             <option value="Crohn's & Colitis" style="background-color:lightblue">Crohn's & Colitis</option>
+             <option value="Liver Disease." style="background-color:lightblue">Liver Disease.</option>
+             </select>
+            </div>
+            <br><div style="margin-top:  -30px;">
+             <label style="color: white;font-family: barlow condensed;font-size: 26px;margin-top: 30px;">Select Doctor Id:</label>
+             <select name="dname" class="date" >
+             <option value="1" style="background-color:lightblue;color:white">DID01</option>
+             <option value="2" style="background-color:lightblue;color:white">DID02</option>
+             <option value="3" style="background-color:lightblue;color:white">DID03</option>
+             <option value="4" style="background-color:lightblue;color:white">DID04</option>
+             <option value="5" style="background-color:lightblue;color:white">DID05</option>
+             </select>
+            </div>
+             <div >
+            <label style="color: white;font-family: barlow condensed;font-size: 26px;margin-top: -5px;">Symptoms mentioned in the report:</label>
+            <br>
+            <textarea type="text" id="start" name="date1" value="" min="2019-11-01" max="2021-04-31"  class="date" style="margin-left:20px;height: 80px;width:400px;" ></textarea>
+            
+            </div>
+            <input type="submit" class="btn btn-success" value="Submit" style="font-size: 18px;width: 120px;background-color: #ffd70085;margin-top: -65px;    border: none;font-family: barlow condensed;float:right;margin-right: 10px;box-shadow: 2px 8px 2px 2px rgba(0,0,0,0.3)">
+            </form>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+            
+            
+  <div class="modal fade" id="myModall" role="dialog" style="padding-bottom: 20px;margin-top: 220px;margin-left: 150px;   ">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content" style="background-color: wheat;padding-bottom: 30px;width: 500px;height: 160px">
+        <div class="modal-header">
+          <button type="button" class="close fa-4x" data-dismiss="modal" style="outline:none;margin-top: -25px;color: red">&times;</button>
+          <h4 class="modal-title" style="font-size: 22px;color:#925d36;font-family: times new roman">Wait...</h4>
+        </div>
+        <div class="modal-body">
+            <p style="font-size: 22px;text-align: center;font-family: times new roman">Your are already send the request..</p>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+           
+  <div class="modal fade" id="myModalll" role="dialog" style="padding-bottom: 20px;margin-top: 220px;margin-left: -160px;   ">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content" style="background-color: wheat;padding-bottom: 30px;width: 780px;height: 200px">
+        <div class="modal-header">
+          <button type="button" class="close fa-4x" data-dismiss="modal" style="outline:none;margin-top: -25px;color: red">&times;</button>
+          <h4 class="modal-title" style="font-size: 22px;color:#925d36;font-family: times new roman">Wait...</h4>
+        </div>
+        <div class="modal-body">
+            <p style="font-size: 22px;text-align: center;font-family: times new roman">If you send the report,Your Query will be processed please wait until the hospital acknowledge.... otherwise send the report to the hospital</p>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+		<div class="clearfix"> </div>
+	</div> 
+           
+
+	<!-- //header -->
+	<!-- modal -->
+	
+	<!--menu script-->
+	<script type='text/javascript' src="{%static 'js/jquery-2.2.3.min.js' %}"></script>
+	<script src="{%static 'js/bootstrap.js' %}"></script>
+	<!--//menu script-->
+	<!--FlexSlider banner-->
+
+	<script defer src="{%static 'js/jquery.flexslider.js' %}"></script>
+	<script type="text/javascript' %}">
+		$(window).load(function () {
+			$('.flexslider').flexslider({
+				animation: "slide",
+				start: function (slider) {
+					$('body').removeClass('loading');
+				}
+			});
+		});
+	</script>
+	<!--End-slider-script-->
+	<!-- OnScroll-Number-Increase-JavaScript -->
+	<script src="{%static 'js/jquery.waypoints.min.js' %}"></script>
+	<script src="{%static 'js/jquery.countup.js' %}"></script>
+	<script>
+		$('.counter').countUp();
+	</script>
+	<!-- //OnScroll-Number-Increase-JavaScript -->
+	<script src="{%static 'js/jquery.chocolat.js' %}"></script>
+
+	<!--light-box-files -->
+	<script type="text/javascript">
+		$(function () {
+			$('.w3_agile_gallery_grid a').Chocolat();
+		});
+	</script>
+	<!-- //gallery -->
+	<!--client carousel -->
+	<script src="{%static 'js/owl.carousel.js' %}"></script>
+	<script>
+		$(document).ready(function () {
+			$("#owl-demo").owlCarousel({
+				items: 1,
+				itemsDesktop: [768, 1],
+				itemsDesktopSmall: [414, 1],
+				lazyLoad: true,
+				autoPlay: true,
+				navigation: true,
+
+				navigationText: false,
+				pagination: true,
+
+			});
+
+		});
+	</script>
+	<!-- start-smoth-scrolling -->
+	<script type="text/javascript" src="{%static 'js/move-top.js' %}"></script>
+	<script type="text/javascript" src="{%static 'js/easing.js' %}"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function ($) {
+			$(".scroll").click(function (event) {
+				event.preventDefault();
+				$('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
+			});
+		});
+	</script>
+	<!-- start-smoth-scrolling -->
+
+	<!-- here stars scrolling icon -->
+	<script type="text/javascript">
+		$(document).ready(function () {
+			/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+				};
+			*/
+
+			$().UItoTop({ easingType: 'easeOutQuart' });
+
+		});
+	</script>
+	<!-- //here ends scrolling icon -->
+</body>
+
+</html>
